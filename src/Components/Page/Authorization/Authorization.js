@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { UseContext } from "../../../Contract/Context";
-import './Page_1.css';
+import './Authorization';
 const LogIn = () => {
 
 	const { web3, Contract } = UseContext()
