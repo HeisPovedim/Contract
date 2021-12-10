@@ -1,0 +1,24 @@
+h4 {
+	color: aliceblue;
+}
+
+.reg-link {
+	text-decoration: none;
+	margin: 5px 5px 5px 5px;
+}
+
+.pas-input {
+	margin: 5px 5px 5px 5px;
+}
+
+.but-auto {
+	margin: 5px 5px 5px 5px;
+}
+
+.select-auto {
+	margin: 5px 5px 5px 5px;
+}
+
+p {
+	margin-bottom: 0px;
+}

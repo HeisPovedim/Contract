@@ -1,0 +1,17 @@
+.pattern {
+	color: white;
+	background-color:#282c34;
+	margin: 0px 0px 0px 0px;
+}
+
+.patterns {
+	margin-bottom: 5px;
+}
+
+.patterns .select-patterns {
+	margin: 5px 5px 5px 5px;
+}
+
+.categories {	
+	margin-bottom: 5px;
+}

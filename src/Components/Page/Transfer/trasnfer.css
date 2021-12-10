@@ -1,0 +1,35 @@
+.exit {
+	margin: 15px 5px 5px 5px;
+}
+
+.transfer {
+	font-size: 50px;
+	font-family: ‘Raleway’,sans-serif;
+}
+
+.to_send {
+	margin: 15px 5px 5px 5px;
+}
+
+.accept {
+	margin: 15px 5px 5px 5px;
+}
+
+.not {
+	margin: 15px 5px 5px 5px;
+}
+
+.pattern {
+	margin: 15px 5px 0px 5px;
+}
+
+h3 {
+	color:white;
+	background-color:#282c34;
+	margin: 0px 0px 0px 0px;
+}
+
+p {
+	color: white;
+	background-color:#282c34;
+}
