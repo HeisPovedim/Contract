@@ -20,7 +20,7 @@ const Pattern = () => {
 	async function logOut() {
 		web3.eth.personal.lockAccount(address);
 		alert("Вы вышли из аккаунта");
-		history.push('/Page 1');
+		history.push('/Authorization');
 	}
 
 	async function createPattern (e) {
@@ -68,30 +68,30 @@ const Pattern = () => {
 	</p>
 	<div className='patterns'>
 		<p>Просмотр шаблонов</p>
-			<select className='select-patterns btn btn-light'>
+			<select className='select-patterns'>
 				{patterns.map((arr, i)=><option key={i} value={String(arr)}>{arr}</option>)}
 			</select><br/>
 	</div>
 	<div className='create-patterns'>
 		<p>Создание шаблонов</p>
 		<form onSubmit={ createPattern }>
-			<input className='btn btn-light btn-sm' required placeholder='Имя' onChange={(e) => setPatternName(e.target.value)}/><br/>
-			<input className='btn btn-light btn-sm' required placeholder='Категория' onChange={(e) => setPatternCategory(e.target.value)}/><br/>
-			<input className='btn btn-light btn-sm' required placeholder='Монеты' onChange={(e) => setPatternMoney(e.target.value)}/><br/>
-			<button className='btn btn-success reg-link'>Создать</button>
+			<input className='' required placeholder='Имя' onChange={(e) => setPatternName(e.target.value)}/><br/>
+			<input className='' required placeholder='Категория' onChange={(e) => setPatternCategory(e.target.value)}/><br/>
+			<input className='' required placeholder='Монеты' onChange={(e) => setPatternMoney(e.target.value)}/><br/>
+			<button className='reg-link'>Создать</button>
 		</form>
 	</div>
 	<div className='categories'>
 		<p>Просмотр категории</p>
-			<select className='select-patterns btn btn-light'>
+			<select className='select-patterns'>
 				{categories.map((arr, i)=><option key={i} value={String(arr)}>{arr}</option>)}
 			</select><br/>
 	</div>
 	<div className='create-categories'>
 		<p>Создание категории</p>
 		<form onSubmit={ createCategories }>
-				<input className='btn btn-light btn-sm' required placeholder='Имя' onChange={(e) => setCategoriesName(e.target.value)}/><br/>
-				<button className='btn btn-success reg-link'>Создать</button>
+				<input className='' required placeholder='Имя' onChange={(e) => setCategoriesName(e.target.value)}/><br/>
+				<button className=''>Создать</button>
 			</form>
 	</div>
 	</>
