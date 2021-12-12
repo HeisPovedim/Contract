@@ -1,8 +1,9 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { UseContext } from "../../../Contract/Context";
-import './Authorization';
-const LogIn = () => {
+import './Authorization.css';
+const Authorization = () => {
 
 	const { web3, Contract } = UseContext()
 	const [Accounts, setAccounts] = useState([])
@@ -87,4 +88,4 @@ const reLogin = async () => {
 	);
 };
 
-export default LogIn;
+export default Authorization;

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'
 import { UseContext } from "../../../Contract/Context";
-import './Page_2.css'
+import './Registration.css'
 
-const Page_2 = () => {
+const Registration = () => {
 	const { web3, Contract } = UseContext()
 	const [setAccounts] = useState([])
 	const [FIO, setFIO] = useState('')
@@ -45,4 +45,4 @@ const Page_2 = () => {
 	);
 };
 
-export default Page_2;
+export default Registration;
