@@ -1,1 +1,0 @@
-geth.exe --rpc --rpcaddr "127.0.0.1" --rpcapi "eth, miner, net, web3, admin, personal" --networkid 15 --datadir "C:\Contract" --allow-insecure-unlock --rpccorsdomain "*" console
