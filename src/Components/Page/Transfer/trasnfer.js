@@ -37,7 +37,7 @@ const Transfer = () => {
 	async function logOut() {
 		web3.eth.personal.lockAccount(address);
 		alert("Вы вышли из аккаунта");
-		history.push('/Page 1');
+		history.push('/Authorization');
 	}
 
 	async function createTransfer(e) {

@@ -28,6 +28,9 @@ const Pattern = () => {
 		try {
 			await Contract.methods.createPattern(patternName, patternCategory, patternMoney).send({from: address});
 			alert('Шаблон создан!');
+			let tmp = await Contract.methods.viewPatterns().call();
+			alert(`Все шаблоны в системе теперь выглядят так: \n ${tmp}`);
+			e.target.reset();
 		} catch (e) {
 			alert(e);
 		}
@@ -38,60 +41,33 @@ const Pattern = () => {
 		try {
 			await Contract.methods.createCatefories(categoriesName).send({from: address});
 			alert('Шаблон создан!');
+			let tmp = await Contract.methods.viewCategories().call();
+			alert(`Все категории в системе теперь выглядят так: \n ${tmp}`);
+			e.target.reset();
 		} catch (e) {
 			alert(e);
 		}
 	}
 
-	useEffect(() => {
-		async function listPatterns() {
-			let Patterns = await Contract.methods.viewPatterns().call();
-			let patternNames = Object.values(Patterns);
-			patternNames.splice(0, 0, "Шаблоны");
-			setPatterns(patternNames);
-		}
-		listPatterns();
-
-		async function listСategories() {
-			let Сategories = await Contract.methods.viewCategories().call();
-			let categorieNames = Object.values(Сategories);
-			categorieNames.splice(0, 0, "Категории");
-			setСategories(categorieNames);
-		}
-		listСategories();
-	},)
-
 	return(
 	<>
-	<p>Адрес: {address}<br/>
-		<button className='exit btn btn-danger btn-lg' onClick={ logOut }>Выйти</button>
-	</p>
-	<div className='patterns'>
-		<p>Просмотр шаблонов</p>
-			<select className='select-patterns'>
-				{patterns.map((arr, i)=><option key={i} value={String(arr)}>{arr}</option>)}
-			</select><br/>
-	</div>
+		<p>Адрес: {address}<br/>
+			<button className='exit btn btn-danger btn-lg' onClick={ logOut }>Выйти</button>
+		</p>
 	<div className='create-patterns'>
 		<p>Создание шаблонов</p>
 		<form onSubmit={ createPattern }>
-			<input className='' required placeholder='Имя' onChange={(e) => setPatternName(e.target.value)}/><br/>
-			<input className='' required placeholder='Категория' onChange={(e) => setPatternCategory(e.target.value)}/><br/>
-			<input className='' required placeholder='Монеты' onChange={(e) => setPatternMoney(e.target.value)}/><br/>
-			<button className='reg-link'>Создать</button>
+			<input className='btn btn-light' required placeholder='Имя' onChange={(e) => setPatternName(e.target.value)}/><br/>
+			<input className='btn btn-light' required placeholder='Категория' onChange={(e) => setPatternCategory(e.target.value)}/><br/>
+			<input className='btn btn-light' required placeholder='Монеты' onChange={(e) => setPatternMoney(e.target.value)}/><br/>
+			<button className='btn btn-success reg-link'>Создать</button>
 		</form>
-	</div>
-	<div className='categories'>
-		<p>Просмотр категории</p>
-			<select className='select-patterns'>
-				{categories.map((arr, i)=><option key={i} value={String(arr)}>{arr}</option>)}
-			</select><br/>
 	</div>
 	<div className='create-categories'>
 		<p>Создание категории</p>
 		<form onSubmit={ createCategories }>
-				<input className='' required placeholder='Имя' onChange={(e) => setCategoriesName(e.target.value)}/><br/>
-				<button className=''>Создать</button>
+				<input className='btn btn-light' required placeholder='Имя' onChange={(e) => setCategoriesName(e.target.value)}/><br/>
+				<button className='btn btn-success reg-lin'>Создать</button>
 			</form>
 	</div>
 	</>
