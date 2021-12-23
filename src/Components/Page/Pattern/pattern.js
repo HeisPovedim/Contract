@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { UseContext } from "../../../Contract/Context";
 import { useHistory } from 'react-router-dom';
 import "./pattern.css"
@@ -7,11 +7,9 @@ const Pattern = () => {
 
 	const history = useHistory();
 	const { web3, Contract } = UseContext()
-	const [patterns, setPatterns] = useState([]);
 	const [patternName, setPatternName] = useState();
 	const [patternCategory, setPatternCategory] = useState();
 	const [patternMoney, setPatternMoney] = useState();
-	const [categories, setСategories] = useState([]);
 	const [categoriesName, setCategoriesName] = useState();
 
 
